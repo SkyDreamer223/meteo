@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
+        integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
     <title>Meteo</title>
+    <style>
+        header{
+            background-color: #123456;
+        }
+        h1{
+            padding: 30px;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
 </head>
-<body> 
-        <h1 style="text-align: center;">
-            <input type="text" placeholder="ville" name="search" id="laVille" value="">
-            <button type="button" onclick="meteo();"></button>
-        </h1>
+
+<body>
+    <header>
+        <h1>Meteo</h1>
+    </header>
+    <h1 style="text-align: center;">
+        <input type="text" placeholder="Insérer une ville" name="search" id="laVille" value="">
+        <button type="button" onclick="meteo();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-search">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </h1>
     </header>
     <main role="p">
         <ul id="list"></ul>
         <div id="map_id"></div>
     </main>
     <script src="app.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3G1onVAprsfB8gD6nBKn-Q0OqlEakuhQ&callback=initMap"
-  type="text/javascript"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3G1onVAprsfB8gD6nBKn-Q0OqlEakuhQ&callback=initMap"
+        type="text/javascript"></script>
 
 </body>
+
 </html>
